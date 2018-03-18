@@ -1,7 +1,7 @@
 {
   "name": "react-youtube",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "bootstrap": "^4.0.0",
     "lodash": "^4.17.5",
