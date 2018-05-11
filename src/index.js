@@ -1,18 +1,18 @@
 import _ from 'lodash';
-import React, { Component } from 'react';
+import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './style/style.css';
 
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
-import SearchBar from './components/search_bar';
-import VideoList from './components/video_list';
-import VideoDetail from './components/video_detail';
+import SearchBar from './components/SearchBar';
+import VideoList from './components/VideoList';
+import VideoDetail from './components/VideoDetail';
 
-const API_KEY = "AIzaSyASugkBfDUVl017Mg-y6EBcSSTNjgagjEo";
+import API_KEY from './api-key.js'
 
 // Create a new component. This should produce HTML.
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
 
@@ -21,7 +21,7 @@ class App extends Component {
       selectedVideo: null
     };
 
-    this.videoSearch('surfboards');
+    this.videoSearch('');
   }
 
   videoSearch(term) {
